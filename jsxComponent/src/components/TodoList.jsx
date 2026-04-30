@@ -1,4 +1,4 @@
-import "../App.css";
+import "../style/index.css";
 import { IoIosClose } from "react-icons/io";
 
 function TodoList({ todos, onDelete }) {

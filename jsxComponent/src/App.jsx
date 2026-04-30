@@ -6,11 +6,11 @@ import WeatherPage from "./pages/WeatherPage";
 function App() {
   return (
     <div className="app-wrapper">
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/todo" element={<TodoPage />} />
-      <Route path="/weather" element={<WeatherPage />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/todo" element={<TodoPage />} />
+        <Route path="/weather" element={<WeatherPage />} />
+      </Routes>
     </div>
   );
 }

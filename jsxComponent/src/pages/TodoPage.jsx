@@ -1,6 +1,5 @@
 import { useState } from "react";
-import "../App.css";
-import "../index.css";
+import "../style/index.css";
 import TodoList from "../components/TodoList";
 
 function TodoPage() {
@@ -40,9 +39,7 @@ function TodoPage() {
         <button type="submit">Add</button>
       </form>
 
-      <TodoList todos={todos}
-      onDelete={handleDeleteTodos}
-      />
+      <TodoList todos={todos} onDelete={handleDeleteTodos} />
     </div>
   );
 }
