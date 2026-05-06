@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/index.css";
+import styles from "./TodoPage.module.css";
 import TodoList from "../components/TodoList";
 
 function TodoPage() {
@@ -25,18 +26,20 @@ function TodoPage() {
   };
 
   return (
-    <div className="todo-container">
-      <h1>To Do App</h1>
+    <div className={styles.container}>
+      <h1 className={styles.h1}>To Do App</h1>
 
-      <form onSubmit={handleAddTodos}>
-        <input
+      <form onSubmit={handleAddTodos} className={styles.form}>
+        <input className={styles.input}
           type="text"
           placeholder="Enter your To Do"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
 
-        <button type="submit">Add</button>
+        <button type="submit" className={styles.button}>
+          Add
+        </button>
       </form>
 
       <TodoList todos={todos} onDelete={handleDeleteTodos} />

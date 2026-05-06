@@ -1,4 +1,4 @@
-import "../style/index.css";
+import styles from "../pages/TodoPage.module.css";
 import { IoIosClose } from "react-icons/io";
 
 function TodoList({ todos, onDelete }) {
@@ -7,11 +7,11 @@ function TodoList({ todos, onDelete }) {
   }
 
   return (
-    <ul className="todo-list">
+    <ul className={styles.ul}>
       {todos.map((todo, index) => (
-        <li key={index}>
+        <li key={index} className={styles.li}>
           {todo}
-          <button onClick={() => onDelete(index)}>
+          <button className={styles.buttondelete} onClick={() => onDelete(index)}>
             <IoIosClose />
           </button>
         </li>

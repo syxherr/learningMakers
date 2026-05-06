@@ -3,16 +3,16 @@ import "../style/index.css";
 
 function Home() {
   return (
-    <div className="page-container">
+    <div className="container">
       <h1>Mini Apps</h1>
 
       <div className="button-row">
         <Link to="/todo">
-          <button className="button-home">Todo App</button>
+          <button className="button">Todo App</button>
         </Link>
 
         <Link to="/weather">
-          <button className="button-home">Weather App</button>
+          <button className="button">Weather App</button>
         </Link>
       </div>
     </div>
