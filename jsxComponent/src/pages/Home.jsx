@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import "../style/index.css";
 
-function Home() {
+
+function Home({ toggleTheme, isDark }) {
   return (
     <div className="container">
       <h1>Mini Apps</h1>
@@ -14,8 +15,14 @@ function Home() {
         <Link to="/weather">
           <button className="button">Weather App</button>
         </Link>
+        
       </div>
+      <button className="button" onClick={toggleTheme}>
+          {isDark ? "Light Mode" : " Dark Mode"}
+        </button>
     </div>
+    
+    
   );
 }
 

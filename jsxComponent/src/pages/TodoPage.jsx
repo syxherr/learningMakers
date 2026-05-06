@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../style/index.css";
-import styles from "./TodoPage.module.css";
+import styles from "./Todo.module.css";
 import TodoList from "../components/TodoList";
 
 function TodoPage() {

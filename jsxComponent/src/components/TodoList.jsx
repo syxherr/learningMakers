@@ -1,9 +1,9 @@
-import styles from "../pages/TodoPage.module.css";
+import styles from "../pages/Todo.module.css";
 import { IoIosClose } from "react-icons/io";
 
 function TodoList({ todos, onDelete }) {
   if (todos.length === 0) {
-    return <p className="empty">No Task Yet</p>;
+    return <p className={styles.emptyTask}>No Task Yet</p>;
   }
 
   return (
