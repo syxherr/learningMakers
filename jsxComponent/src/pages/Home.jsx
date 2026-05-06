@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "../style/index.css";
+import { ToggleButton, HomeContainer } from "../ThemeSwitch";
 
 
 function Home({ toggleTheme, isDark }) {
   return (
-    <div className="container">
+    <HomeContainer>
       <h1>Mini Apps</h1>
 
       <div className="button-row">
@@ -17,10 +18,10 @@ function Home({ toggleTheme, isDark }) {
         </Link>
         
       </div>
-      <button className="button" onClick={toggleTheme}>
+      <ToggleButton onClick={toggleTheme}>
           {isDark ? "Light Mode" : " Dark Mode"}
-        </button>
-    </div>
+        </ToggleButton>
+    </HomeContainer>
     
     
   );
