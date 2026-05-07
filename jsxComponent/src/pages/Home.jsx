@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../style/index.css";
-import { ToggleButton, HomeContainer } from "../ThemeSwitch";
+import { ToggleButton, HomeContainer } from "../components/ui/ThemeSwitch";
 
 
 function Home({ toggleTheme, isDark }) {

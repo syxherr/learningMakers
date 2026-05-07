@@ -5,7 +5,7 @@ export const darkTheme = {
     primary: "#c2e2ff",
 
     toggleBtn: "#5091fb",
-    container: "rgb(140, 195, 246)"
+    container: "rgb(134, 197, 255)"
 }
 
 export const lightTheme = {
@@ -14,5 +14,5 @@ export const lightTheme = {
     primary: "#c2e2ff",
 
     toggleBtn: "#84a3f8",
-    container: "#96bbf8"
+    container: "#a2c4fb"
 }
