@@ -1,5 +1,5 @@
 import "../style/index.css";
-import PixelSnow from "../components/effect/PixelSnow";
+import PixelSnow from "./components/effect/PixelSnow";
 
 function WeatherPage() {
   return (

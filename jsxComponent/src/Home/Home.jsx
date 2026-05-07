@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../style/index.css";
+import "../style/index.ss";
 import { ToggleButton, HomeContainer } from "../components/ui/ThemeSwitch";
 
 

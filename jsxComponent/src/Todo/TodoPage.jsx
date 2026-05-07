@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import "../style/index.css";
-import styles from "../style/Todo.module.css";
-import TodoList from "../components/TodoList";
+import styles from "./Todo/Todo.module.css";
+import TodoList from "./components/TodoList";
 
 function TodoPage() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
-  const capitalizeFirst = (text) => {
+  const capitalizeFirst = useMemo(() => (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
-  };
+  }, []);
 
-  const handleAddTodos = (e) => {
+  const handleAddTodos = useCallback((e) => {
     e.preventDefault();
     if (input === "") return;
 
@@ -19,11 +19,11 @@ function TodoPage() {
 
     setTodos([capitalizedInput, ...todos]);
     setInput("");
-  };
+  }, [input, todos, capitalizeFirst]);
 
-  const handleDeleteTodos = (index) => {
+  const handleDeleteTodos = useCallback((index) => {
     setTodos(todos.filter((_, i) => i !== index));
-  };
+  }, [todos]);
 
   return (
     <div className={styles.container}>

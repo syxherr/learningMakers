@@ -1,4 +1,5 @@
-import styles from "../style/Todo.module.css";
+import React from "react";
+import styles from "../Todo/Todo.module.css";
 import { IoIosClose } from "react-icons/io";
 
 function TodoList({ todos, onDelete }) {
@@ -20,4 +21,4 @@ function TodoList({ todos, onDelete }) {
   );
 }
 
-export default TodoList;
+export default React.memo(TodoList);
