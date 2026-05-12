@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
@@ -24,12 +24,14 @@ function App() {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }, [isDark]);
 
+  const theme = useMemo(() => (isDark ? darkTheme : lightTheme), [isDark]);
+
   const toggleTheme = () => {
     setIsDark(prev => !prev);
   };
 
   return (
-    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
 
       <Suspense fallback={<div>Loading...</div>}>
